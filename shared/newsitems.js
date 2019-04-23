@@ -1,0 +1,89 @@
+const NEWSITEMS =
+    [
+        {
+            _id: "0",
+            name:'One small step for an alien, one giant conquest of mankind',
+            image: 'images/alienfeet.jpg',
+            description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit eget gravida cum sociis natoque penatibus et magnis. Interdum consectetur libero id faucibus nisl. Facilisis sed odio morbi quis commodo odio. Tristique et egestas quis ipsum suspendisse ultrices. Vel pharetra vel turpis nunc eget lorem dolor. Eget mauris pharetra et ultrices neque. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Eu turpis egestas pretium aenean pharetra magna. Odio eu feugiat pretium nibh ipsum consequat. Convallis a cras semper auctor. Non arcu risus quis varius quam. Sed faucibus turpis in eu mi bibendum neque egestas congue. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Mollis aliquam ut porttitor leo a diam sollicitudin. Mauris sit amet massa vitae tortor condimentum lacinia quis. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Ornare quam viverra orci sagittis eu volutpat odio. Venenatis cras sed felis eget velit aliquet sagittis. Odio eu feugiat pretium nibh.'
+        },
+        {
+            _id: "1",
+            name:'Backseat boys on a world tour staring in February',
+            image: 'images/backseat.jpg',
+            description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit eget gravida cum sociis natoque penatibus et magnis. Interdum consectetur libero id faucibus nisl. Facilisis sed odio morbi quis commodo odio. Tristique et egestas quis ipsum suspendisse ultrices. Vel pharetra vel turpis nunc eget lorem dolor. Eget mauris pharetra et ultrices neque. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Eu turpis egestas pretium aenean pharetra magna. Odio eu feugiat pretium nibh ipsum consequat. Convallis a cras semper auctor. Non arcu risus quis varius quam. Sed faucibus turpis in eu mi bibendum neque egestas congue. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Mollis aliquam ut porttitor leo a diam sollicitudin. Mauris sit amet massa vitae tortor condimentum lacinia quis. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Ornare quam viverra orci sagittis eu volutpat odio. Venenatis cras sed felis eget velit aliquet sagittis. Odio eu feugiat pretium nibh.'
+        },
+        {
+            _id: "2",
+            name:'The glint in that eye: It is a mooving story',
+            image: 'images/calf.jpg',
+            description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit eget gravida cum sociis natoque penatibus et magnis. Interdum consectetur libero id faucibus nisl. Facilisis sed odio morbi quis commodo odio. Tristique et egestas quis ipsum suspendisse ultrices. Vel pharetra vel turpis nunc eget lorem dolor. Eget mauris pharetra et ultrices neque. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Eu turpis egestas pretium aenean pharetra magna. Odio eu feugiat pretium nibh ipsum consequat. Convallis a cras semper auctor. Non arcu risus quis varius quam. Sed faucibus turpis in eu mi bibendum neque egestas congue. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Mollis aliquam ut porttitor leo a diam sollicitudin. Mauris sit amet massa vitae tortor condimentum lacinia quis. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Ornare quam viverra orci sagittis eu volutpat odio. Venenatis cras sed felis eget velit aliquet sagittis. Odio eu feugiat pretium nibh.'
+        },
+        {
+            _id: "3",
+            name:'Explosive Story: Illegal firecrackers discovered in suburban garage',
+            image: 'images/crackers.jpg',
+            description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit eget gravida cum sociis natoque penatibus et magnis. Interdum consectetur libero id faucibus nisl. Facilisis sed odio morbi quis commodo odio. Tristique et egestas quis ipsum suspendisse ultrices. Vel pharetra vel turpis nunc eget lorem dolor. Eget mauris pharetra et ultrices neque. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Eu turpis egestas pretium aenean pharetra magna. Odio eu feugiat pretium nibh ipsum consequat. Convallis a cras semper auctor. Non arcu risus quis varius quam. Sed faucibus turpis in eu mi bibendum neque egestas congue. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Mollis aliquam ut porttitor leo a diam sollicitudin. Mauris sit amet massa vitae tortor condimentum lacinia quis. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Ornare quam viverra orci sagittis eu volutpat odio. Venenatis cras sed felis eget velit aliquet sagittis. Odio eu feugiat pretium nibh.'
+        },
+        {
+            _id: "4",
+            name:'Moonshine: The fountain of youth',
+            image: 'images/fountain.jpg',
+            description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit eget gravida cum sociis natoque penatibus et magnis. Interdum consectetur libero id faucibus nisl. Facilisis sed odio morbi quis commodo odio. Tristique et egestas quis ipsum suspendisse ultrices. Vel pharetra vel turpis nunc eget lorem dolor. Eget mauris pharetra et ultrices neque. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Eu turpis egestas pretium aenean pharetra magna. Odio eu feugiat pretium nibh ipsum consequat. Convallis a cras semper auctor. Non arcu risus quis varius quam. Sed faucibus turpis in eu mi bibendum neque egestas congue. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Mollis aliquam ut porttitor leo a diam sollicitudin. Mauris sit amet massa vitae tortor condimentum lacinia quis. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Ornare quam viverra orci sagittis eu volutpat odio. Venenatis cras sed felis eget velit aliquet sagittis. Odio eu feugiat pretium nibh.'
+        },
+        {
+            _id: "5",
+            name:'Breaking Story: Giant hole in the roof: It came down like a ton of bricks',
+            image: 'images/kiln.jpg',
+            description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit eget gravida cum sociis natoque penatibus et magnis. Interdum consectetur libero id faucibus nisl. Facilisis sed odio morbi quis commodo odio. Tristique et egestas quis ipsum suspendisse ultrices. Vel pharetra vel turpis nunc eget lorem dolor. Eget mauris pharetra et ultrices neque. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Eu turpis egestas pretium aenean pharetra magna. Odio eu feugiat pretium nibh ipsum consequat. Convallis a cras semper auctor. Non arcu risus quis varius quam. Sed faucibus turpis in eu mi bibendum neque egestas congue. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Mollis aliquam ut porttitor leo a diam sollicitudin. Mauris sit amet massa vitae tortor condimentum lacinia quis. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Ornare quam viverra orci sagittis eu volutpat odio. Venenatis cras sed felis eget velit aliquet sagittis. Odio eu feugiat pretium nibh.'
+        },
+        {
+            _id: "6",
+            name:'The final leap from ape to man',
+            image: 'images/langur.jpg',
+            description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit eget gravida cum sociis natoque penatibus et magnis. Interdum consectetur libero id faucibus nisl. Facilisis sed odio morbi quis commodo odio. Tristique et egestas quis ipsum suspendisse ultrices. Vel pharetra vel turpis nunc eget lorem dolor. Eget mauris pharetra et ultrices neque. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Eu turpis egestas pretium aenean pharetra magna. Odio eu feugiat pretium nibh ipsum consequat. Convallis a cras semper auctor. Non arcu risus quis varius quam. Sed faucibus turpis in eu mi bibendum neque egestas congue. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Mollis aliquam ut porttitor leo a diam sollicitudin. Mauris sit amet massa vitae tortor condimentum lacinia quis. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Ornare quam viverra orci sagittis eu volutpat odio. Venenatis cras sed felis eget velit aliquet sagittis. Odio eu feugiat pretium nibh.'
+        },
+        {
+            _id: "7",
+            name:'Lights everywhere and I am a happy kemper',
+            image: 'images/lights.jpg',
+            description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit eget gravida cum sociis natoque penatibus et magnis. Interdum consectetur libero id faucibus nisl. Facilisis sed odio morbi quis commodo odio. Tristique et egestas quis ipsum suspendisse ultrices. Vel pharetra vel turpis nunc eget lorem dolor. Eget mauris pharetra et ultrices neque. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Eu turpis egestas pretium aenean pharetra magna. Odio eu feugiat pretium nibh ipsum consequat. Convallis a cras semper auctor. Non arcu risus quis varius quam. Sed faucibus turpis in eu mi bibendum neque egestas congue. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Mollis aliquam ut porttitor leo a diam sollicitudin. Mauris sit amet massa vitae tortor condimentum lacinia quis. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Ornare quam viverra orci sagittis eu volutpat odio. Venenatis cras sed felis eget velit aliquet sagittis. Odio eu feugiat pretium nibh.'
+        },
+        {
+            _id: "8",
+            name:'Aliens stole my river: The dry facts',
+            image: 'images/river.jpg',
+            description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit eget gravida cum sociis natoque penatibus et magnis. Interdum consectetur libero id faucibus nisl. Facilisis sed odio morbi quis commodo odio. Tristique et egestas quis ipsum suspendisse ultrices. Vel pharetra vel turpis nunc eget lorem dolor. Eget mauris pharetra et ultrices neque. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Eu turpis egestas pretium aenean pharetra magna. Odio eu feugiat pretium nibh ipsum consequat. Convallis a cras semper auctor. Non arcu risus quis varius quam. Sed faucibus turpis in eu mi bibendum neque egestas congue. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Mollis aliquam ut porttitor leo a diam sollicitudin. Mauris sit amet massa vitae tortor condimentum lacinia quis. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Ornare quam viverra orci sagittis eu volutpat odio. Venenatis cras sed felis eget velit aliquet sagittis. Odio eu feugiat pretium nibh.'
+        },
+        {
+            _id: "9",
+            name:'Missing guests give a cold shoulder',
+            image: 'images/snow.jpg',
+            description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit eget gravida cum sociis natoque penatibus et magnis. Interdum consectetur libero id faucibus nisl. Facilisis sed odio morbi quis commodo odio. Tristique et egestas quis ipsum suspendisse ultrices. Vel pharetra vel turpis nunc eget lorem dolor. Eget mauris pharetra et ultrices neque. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Eu turpis egestas pretium aenean pharetra magna. Odio eu feugiat pretium nibh ipsum consequat. Convallis a cras semper auctor. Non arcu risus quis varius quam. Sed faucibus turpis in eu mi bibendum neque egestas congue. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Mollis aliquam ut porttitor leo a diam sollicitudin. Mauris sit amet massa vitae tortor condimentum lacinia quis. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Ornare quam viverra orci sagittis eu volutpat odio. Venenatis cras sed felis eget velit aliquet sagittis. Odio eu feugiat pretium nibh.'
+        },
+        {
+            _id: "10",
+            name:'Stairway to heaven: The Zepplin story',
+            image: 'images/stairs.jpg',
+            description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit eget gravida cum sociis natoque penatibus et magnis. Interdum consectetur libero id faucibus nisl. Facilisis sed odio morbi quis commodo odio. Tristique et egestas quis ipsum suspendisse ultrices. Vel pharetra vel turpis nunc eget lorem dolor. Eget mauris pharetra et ultrices neque. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Eu turpis egestas pretium aenean pharetra magna. Odio eu feugiat pretium nibh ipsum consequat. Convallis a cras semper auctor. Non arcu risus quis varius quam. Sed faucibus turpis in eu mi bibendum neque egestas congue. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Mollis aliquam ut porttitor leo a diam sollicitudin. Mauris sit amet massa vitae tortor condimentum lacinia quis. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Ornare quam viverra orci sagittis eu volutpat odio. Venenatis cras sed felis eget velit aliquet sagittis. Odio eu feugiat pretium nibh.'
+        },
+        {
+            _id: "11",
+            name:'I just rolled over 10000 miles and boy am I tired',
+            image: 'images/tire.jpg',
+            description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit eget gravida cum sociis natoque penatibus et magnis. Interdum consectetur libero id faucibus nisl. Facilisis sed odio morbi quis commodo odio. Tristique et egestas quis ipsum suspendisse ultrices. Vel pharetra vel turpis nunc eget lorem dolor. Eget mauris pharetra et ultrices neque. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Eu turpis egestas pretium aenean pharetra magna. Odio eu feugiat pretium nibh ipsum consequat. Convallis a cras semper auctor. Non arcu risus quis varius quam. Sed faucibus turpis in eu mi bibendum neque egestas congue. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Mollis aliquam ut porttitor leo a diam sollicitudin. Mauris sit amet massa vitae tortor condimentum lacinia quis. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Ornare quam viverra orci sagittis eu volutpat odio. Venenatis cras sed felis eget velit aliquet sagittis. Odio eu feugiat pretium nibh.'
+        },
+        {
+            _id: "12",
+            name:'It was just a small cut, and now this?!',
+            image: 'images/trees.jpg',
+            description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit eget gravida cum sociis natoque penatibus et magnis. Interdum consectetur libero id faucibus nisl. Facilisis sed odio morbi quis commodo odio. Tristique et egestas quis ipsum suspendisse ultrices. Vel pharetra vel turpis nunc eget lorem dolor. Eget mauris pharetra et ultrices neque. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Eu turpis egestas pretium aenean pharetra magna. Odio eu feugiat pretium nibh ipsum consequat. Convallis a cras semper auctor. Non arcu risus quis varius quam. Sed faucibus turpis in eu mi bibendum neque egestas congue. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Mollis aliquam ut porttitor leo a diam sollicitudin. Mauris sit amet massa vitae tortor condimentum lacinia quis. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Ornare quam viverra orci sagittis eu volutpat odio. Venenatis cras sed felis eget velit aliquet sagittis. Odio eu feugiat pretium nibh.'
+        },
+        {
+            _id: "13",
+            name:'Calm before the storm: The disappearing Lochness monster',
+            image: 'images/water.jpg',
+            description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit eget gravida cum sociis natoque penatibus et magnis. Interdum consectetur libero id faucibus nisl. Facilisis sed odio morbi quis commodo odio. Tristique et egestas quis ipsum suspendisse ultrices. Vel pharetra vel turpis nunc eget lorem dolor. Eget mauris pharetra et ultrices neque. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Eu turpis egestas pretium aenean pharetra magna. Odio eu feugiat pretium nibh ipsum consequat. Convallis a cras semper auctor. Non arcu risus quis varius quam. Sed faucibus turpis in eu mi bibendum neque egestas congue. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Mollis aliquam ut porttitor leo a diam sollicitudin. Mauris sit amet massa vitae tortor condimentum lacinia quis. Nulla aliquet porttitor lacus luctus accumsan tortor posuere. Ornare quam viverra orci sagittis eu volutpat odio. Venenatis cras sed felis eget velit aliquet sagittis. Odio eu feugiat pretium nibh.'
+        }
+    ];
+
+    module.exports = NEWSITEMS;
