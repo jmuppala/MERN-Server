@@ -40,7 +40,13 @@ router.route('/')
 /* /news/:newsId REST API endpoint */
 router.route('/:newsId')
 .get((req, res, next) => {
-
+  NewsItem.findById(req.params.newsId)
+  .then((newsitem) => {
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'application/json');
+      res.json(newsitem);
+  }, (err) => next(err))
+  .catch((err) => next(err));
 })
 .post((req, res, next) => {
   var err = new Error('POST is forbidden on /news/:newsId!');
@@ -48,10 +54,24 @@ router.route('/:newsId')
   next(err);
 })
 .put((req, res, next) => {
-
+  NewsItem.findByIdAndUpdate(req.params.newsId, {
+      $set: req.body
+  }, { new: true })
+  .then((newsitem) => {
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'application/json');
+      res.json(newsitem);
+  }, (err) => next(err))
+  .catch((err) => next(err));
 })
 .delete((req, res, next) => {
-
+  NewsItem.findByIdAndRemove(req.params.newsId)
+  .then((resp) => {
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'application/json');
+      res.json(resp);
+  }, (err) => next(err))
+  .catch((err) => next(err));
 });
 
 module.exports = router;
