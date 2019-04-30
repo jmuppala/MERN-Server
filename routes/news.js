@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const NewsItem = require('../models/newsitem');
+const cors = require('./cors');
 
 /* /news REST API endpoint */
 router.route('/')
-.get((req, res, next) => {
+.options(cors.corsWithOptions, (req, res) => { res.sendStatus(200); })
+.get(cors.cors, (req, res, next) => {
   NewsItem.find({})
   .then((newsitems) => {
       res.statusCode = 200;
@@ -13,7 +15,7 @@ router.route('/')
   }, (err) => next(err))
   .catch((err) => next(err));
 })
-.post((req, res, next) => {
+.post(cors.corsWithOptions, (req, res, next) => {
   NewsItem.create(req.body)
   .then((newsitem) => {
       res.statusCode = 200;
@@ -22,12 +24,12 @@ router.route('/')
   }, (err) => next(err))
   .catch((err) => next(err));
 })
-.put((req, res, next) => {
+.put(cors.corsWithOptions, (req, res, next) => {
   var err = new Error('PUT is forbidden on /news!');
   err.status = 403;
   next(err);
 })
-.delete((req, res, next) => {
+.delete(cors.corsWithOptions, (req, res, next) => {
   NewsItem.remove({})
   .then((resp) => {
       res.statusCode = 200;
@@ -39,7 +41,8 @@ router.route('/')
 
 /* /news/:newsId REST API endpoint */
 router.route('/:newsId')
-.get((req, res, next) => {
+.options(cors.corsWithOptions, (req, res) => { res.sendStatus(200); })
+.get(cors.cors, (req, res, next) => {
   NewsItem.findById(req.params.newsId)
   .then((newsitem) => {
       res.statusCode = 200;
@@ -48,12 +51,12 @@ router.route('/:newsId')
   }, (err) => next(err))
   .catch((err) => next(err));
 })
-.post((req, res, next) => {
+.post(cors.corsWithOptions, (req, res, next) => {
   var err = new Error('POST is forbidden on /news/:newsId!');
   err.status = 403;
   next(err);
 })
-.put((req, res, next) => {
+.put(cors.corsWithOptions, (req, res, next) => {
   NewsItem.findByIdAndUpdate(req.params.newsId, {
       $set: req.body
   }, { new: true })
@@ -64,7 +67,7 @@ router.route('/:newsId')
   }, (err) => next(err))
   .catch((err) => next(err));
 })
-.delete((req, res, next) => {
+.delete(cors.corsWithOptions, (req, res, next) => {
   NewsItem.findByIdAndRemove(req.params.newsId)
   .then((resp) => {
       res.statusCode = 200;
