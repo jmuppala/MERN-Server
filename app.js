@@ -4,12 +4,15 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
+const passport = require('passport');
+const authenticate = require('./authenticate');
+const config = require('./config');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const newsRouter = require('./routes/news');
 
-const url = 'mongodb://localhost:27017/fakeNews';
+const url = config.mongoUrl;
 const connect = mongoose.connect(url, {useNewUrlParser: true});
 
 connect.then((db) => {
@@ -22,6 +25,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(passport.initialize());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
