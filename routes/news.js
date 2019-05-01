@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const NewsItem = require('../models/newsitem');
 const cors = require('./cors');
+const authenticate = require('../authenticate');
 
 /* /news REST API endpoint */
 router.route('/')
@@ -15,7 +16,7 @@ router.route('/')
   }, (err) => next(err))
   .catch((err) => next(err));
 })
-.post(cors.corsWithOptions, (req, res, next) => {
+.post(cors.corsWithOptions, authenticate.verifyUser, (req, res, next) => {
   NewsItem.create(req.body)
   .then((newsitem) => {
       res.statusCode = 200;
@@ -24,12 +25,12 @@ router.route('/')
   }, (err) => next(err))
   .catch((err) => next(err));
 })
-.put(cors.corsWithOptions, (req, res, next) => {
+.put(cors.corsWithOptions, authenticate.verifyUser, (req, res, next) => {
   var err = new Error('PUT is forbidden on /news!');
   err.status = 403;
   next(err);
 })
-.delete(cors.corsWithOptions, (req, res, next) => {
+.delete(cors.corsWithOptions, authenticate.verifyUser, (req, res, next) => {
   NewsItem.remove({})
   .then((resp) => {
       res.statusCode = 200;
@@ -51,12 +52,12 @@ router.route('/:newsId')
   }, (err) => next(err))
   .catch((err) => next(err));
 })
-.post(cors.corsWithOptions, (req, res, next) => {
+.post(cors.corsWithOptions, authenticate.verifyUser, (req, res, next) => {
   var err = new Error('POST is forbidden on /news/:newsId!');
   err.status = 403;
   next(err);
 })
-.put(cors.corsWithOptions, (req, res, next) => {
+.put(cors.corsWithOptions, authenticate.verifyUser, (req, res, next) => {
   NewsItem.findByIdAndUpdate(req.params.newsId, {
       $set: req.body
   }, { new: true })
@@ -67,7 +68,7 @@ router.route('/:newsId')
   }, (err) => next(err))
   .catch((err) => next(err));
 })
-.delete(cors.corsWithOptions, (req, res, next) => {
+.delete(cors.corsWithOptions, authenticate.verifyUser, (req, res, next) => {
   NewsItem.findByIdAndRemove(req.params.newsId)
   .then((resp) => {
       res.statusCode = 200;
